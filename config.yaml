@@ -1,0 +1,48 @@
+model_list:
+  - model_name: mistral-small-2503
+    litellm_params:
+      model: openai/mistral-small-2503
+      api_base: os.environ/LLM_GATEWAY_BASE_URL
+      api_key: os.environ/LLM_GATEWAY_API_KEY
+
+  - model_name: qwen3.5-local
+    litellm_params:
+      model: qwen-toolcalling/qwen3.5:9b
+      api_base: os.environ/OLLAMA_HOST
+
+  - model_name: anthropic.claude-4-5-haiku
+    litellm_params:
+      model: openai/anthropic.claude-4-5-haiku
+      api_base: os.environ/LLM_GATEWAY_BASE_URL
+      api_key: os.environ/LLM_GATEWAY_API_KEY
+
+  - model_name: gemini-2.5-flash
+    litellm_params:
+      model: openai/gemini-2.5-flash
+      api_base: os.environ/LLM_GATEWAY_BASE_URL
+      api_key: os.environ/LLM_GATEWAY_API_KEY
+
+  - model_name: gemini-3.1-pro
+    litellm_params:
+      model: openai/gemini-3.1-pro
+      api_base: os.environ/LLM_GATEWAY_BASE_URL
+      api_key: os.environ/LLM_GATEWAY_API_KEY
+
+router_settings:
+  num_retries: 1
+  retry_after: 0
+  cache: true
+  cache_ttl: 86400
+
+
+litellm_settings:
+  callbacks: app.router.smart_router.router_instance
+  drop_params: true
+  modify_params: true
+  request_timeout: 120
+  ssl_verify: false
+
+
+general_settings:
+  master_key: sk-litellm-local
+  port: 4000

@@ -1,0 +1,5 @@
+docs/
+readme.md
+docker-compose.yaml
+CLAUDE.md
+AGENTS.md

@@ -1,0 +1,8 @@
+FROM qwen2.5:1.5b
+
+PARAMETER temperature 0.1
+PARAMETER num_predict 50
+PARAMETER stop "}"
+PARAMETER stop "</json>"
+
+SYSTEM """You are a query complexity classifier. Output only JSON with keys: tier (simple|standard|complex) and confidence (0.0-1.0)."""

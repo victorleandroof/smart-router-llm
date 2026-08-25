@@ -1,0 +1,122 @@
+{
+  ".claude/settings.json": {
+    "mtime": 1786477376.5328014,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  ".claude/settings.local.json": {
+    "mtime": 1786476863.8690205,
+    "ast_hash": "",
+    "semantic_hash": ""
+  },
+  ".opencode/opencode.json": {
+    "mtime": 1786534688.225953,
+    "ast_hash": "e5f74d14a81702b55bdf53b33ec991d7",
+    "semantic_hash": ""
+  },
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1786477385.2927346,
+    "ast_hash": "3ea725724bc8ebe483c9f13d6aa1124f",
+    "semantic_hash": "3ea725724bc8ebe483c9f13d6aa1124f"
+  },
+  "app/__init__.py": {
+    "mtime": 1786397685.183348,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/cache/__init__.py": {
+    "mtime": 1786397685.183768,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/cache/router_cache.py": {
+    "mtime": 1786021453.780838,
+    "ast_hash": "024969c5a6b96c19bc9d8b82ae68b478",
+    "semantic_hash": "024969c5a6b96c19bc9d8b82ae68b478"
+  },
+  "app/main.py": {
+    "mtime": 1786586741.1918578,
+    "ast_hash": "7791d2ff10ca47ac5c17a334ed626e87",
+    "semantic_hash": ""
+  },
+  "app/optimization/__init__.py": {
+    "mtime": 1786397685.183872,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/optimization/token_reducer.py": {
+    "mtime": 1786549855.133611,
+    "ast_hash": "85fd31e5a472291897aee604df42cb18",
+    "semantic_hash": ""
+  },
+  "app/router/__init__.py": {
+    "mtime": 1786397685.183668,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/router/llm_router.py": {
+    "mtime": 1786550805.199915,
+    "ast_hash": "2396aa2b54cc6a4688e0fa0afeb18d81",
+    "semantic_hash": ""
+  },
+  "app/router/semantic_router.py": {
+    "mtime": 1786550783.3432927,
+    "ast_hash": "000f15c8d27b72a0e32b19308b53cb62",
+    "semantic_hash": ""
+  },
+  "app/router/smart_router.py": {
+    "mtime": 1786647135.913551,
+    "ast_hash": "43fe192b927d41fae33b806167496e63",
+    "semantic_hash": ""
+  },
+  "app/utils/__init__.py": {
+    "mtime": 1786397685.183956,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "app/utils/prompt_utils.py": {
+    "mtime": 1786473637.367085,
+    "ast_hash": "90f5d66d9896fedd6e618a119ee146db",
+    "semantic_hash": "90f5d66d9896fedd6e618a119ee146db"
+  },
+  "app/utils/tool_sanitizer.py": {
+    "mtime": 1786473253.2240906,
+    "ast_hash": "d96e346854e242f10ffcf4aa2b53a411",
+    "semantic_hash": "d96e346854e242f10ffcf4aa2b53a411"
+  },
+  "scripts/init_ollama.sh": {
+    "mtime": 1786028739.7114363,
+    "ast_hash": "b2cc2a65c667fafe896191e244505a72",
+    "semantic_hash": "b2cc2a65c667fafe896191e244505a72"
+  },
+  "scripts/init_redis.sh": {
+    "mtime": 1786028275.0008497,
+    "ast_hash": "8449fd7c581b77ac416b381f3c2bfbf8",
+    "semantic_hash": "8449fd7c581b77ac416b381f3c2bfbf8"
+  },
+  "scripts/pull_ollama_model.sh": {
+    "mtime": 1786021690.8377495,
+    "ast_hash": "e8db6ddf8bbcea04b2b1f27f7f9cd689",
+    "semantic_hash": "e8db6ddf8bbcea04b2b1f27f7f9cd689"
+  },
+  "scripts/teste.sh": {
+    "mtime": 1786475322.3893533,
+    "ast_hash": "1a277f3c4d817ff79fd15bfe7a1c5ab4",
+    "semantic_hash": "1a277f3c4d817ff79fd15bfe7a1c5ab4"
+  },
+  "scripts/valida_modelos.sh": {
+    "mtime": 1786021750.7676415,
+    "ast_hash": "24b5196236485b8bab98d9a5ce1c8e7b",
+    "semantic_hash": "24b5196236485b8bab98d9a5ce1c8e7b"
+  },
+  "config.yaml": {
+    "mtime": 1786549245.3566694,
+    "ast_hash": "ccbead18ff2a0b76aea6c3cbc382abcb",
+    "semantic_hash": ""
+  },
+  "requirements.txt": {
+    "mtime": 1786394497.3836572,
+    "ast_hash": "24edf731c98b78f636b5335235ddff58",
+    "semantic_hash": "24edf731c98b78f636b5335235ddff58"
+  }
+}
