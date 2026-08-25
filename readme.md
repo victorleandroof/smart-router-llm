@@ -118,6 +118,32 @@ Para reduzir custos e latência, o gateway aplica duas técnicas antes do roteam
 
 ## 6. Configuração e Instalação
 
+### 6.0. Instalação via pip (alternativa ao Docker)
+
+```bash
+pip install smart-router-llm-gateway
+```
+
+Redis e Ollama continuam sendo responsabilidade sua instalar e rodar — o pacote só se conecta a eles, não os empacota nem gerencia.
+
+```bash
+# 1. Configure as variáveis de ambiente (mesmas da seção 6.2)
+export LLM_GATEWAY_API_KEY=seu_token_aqui
+export LLM_GATEWAY_BASE_URL=sua_url_aqui
+
+# 2. Verifica se Redis e Ollama estão acessíveis
+smart-router check
+
+# 3. Baixa os modelos Ollama necessários e cria o modelo classificador
+smart-router pull-models
+
+# 4. Valida conectividade com o gateway corporativo
+smart-router validate
+
+# 5. Sobe o proxy (porta 4000)
+smart-router serve
+```
+
 ### 6.1. Pré-requisitos
 
 *   Docker & Docker Compose

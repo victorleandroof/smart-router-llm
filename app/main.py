@@ -6,6 +6,7 @@ import json
 import litellm
 import asyncio
 import uvicorn
+import importlib.resources
 from litellm.proxy.proxy_server import app, initialize
 from starlette.middleware.base import BaseHTTPMiddleware
 from app.router.smart_router import router_instance
@@ -285,7 +286,20 @@ app.add_middleware(StripAnthropicBeta)
 
 
 def get_config_path():
-    return os.path.join(PROJECT_ROOT, "..", "config.yaml")
+    """Resolve config.yaml: env var > cwd (dev via Makefile/Docker) > empacotado (pip install)."""
+    env_path = os.environ.get("SMART_ROUTER_CONFIG")
+    if env_path:
+        return env_path
+
+    cwd_config = os.path.join(os.getcwd(), "config.yaml")
+    if os.path.isfile(cwd_config):
+        return cwd_config
+
+    repo_root_config = os.path.join(PROJECT_ROOT, "..", "config.yaml")
+    if os.path.isfile(repo_root_config):
+        return repo_root_config
+
+    return str(importlib.resources.files("app").joinpath("config.yaml"))
 
 async def start_litellm():
     from litellm.utils import custom_llm_setup
@@ -316,5 +330,8 @@ async def main():
         start_uvicorn()
     )
 
-if __name__ == "__main__":
+def run():
     asyncio.run(main())
+
+if __name__ == "__main__":
+    run()
