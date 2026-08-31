@@ -29,10 +29,10 @@ class SmartRouterV2(CustomLogger):
     MODEL_TIERS = {
         "simple": "mistral-small-2503",
         "local": "qwen3.5-local",
-        "standard": "gemini-2.5-flash",
-        "complex": "gemini-3.1-pro",
+        "standard": "gemini-3.1-flash-lite",
+        "complex": "gemini-2.5-pro",
     }
-    DEFAULT_MODEL = "gemini-2.5-flash"
+    DEFAULT_MODEL = "gemini-3.1-flash-lite"
 
     FALLBACK_SIMPLE_PATTERNS = [
         r"\b(crud|boilerplate|scaffold|enum|getter|setter|dto|mapper|type|interface)\b",
@@ -189,10 +189,10 @@ class SmartRouterV2(CustomLogger):
         if needs_tool_reroute:
             if self._qwen_tool_safety_net:
                 logger.info(
-                    f"[SmartRouter] Rerouted from {base_model} to anthropic.claude-4-5-haiku "
+                    f"[SmartRouter] Rerouted from {base_model} to claude-haiku-4-5 "
                     f"(tool calling não suportado pelo Mistral; QWEN_TOOL_SAFETY_NET ativo, evitando qwen local)"
                 )
-                return "anthropic.claude-4-5-haiku"
+                return "claude-haiku-4-5"
 
             logger.info(
                 f"[SmartRouter] Rerouted from {base_model} to qwen3.5-local "
@@ -204,10 +204,10 @@ class SmartRouterV2(CustomLogger):
             has_tools or has_tool_history(messages)
         ):
             logger.info(
-                f"[SmartRouter] Rerouted from {base_model} to anthropic.claude-4-5-haiku "
+                f"[SmartRouter] Rerouted from {base_model} to claude-haiku-4-5 "
                 f"(QWEN_TOOL_SAFETY_NET ativo)"
             )
-            return "anthropic.claude-4-5-haiku"
+            return "claude-haiku-4-5"
 
         return base_model
 

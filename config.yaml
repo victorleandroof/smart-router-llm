@@ -10,21 +10,21 @@ model_list:
       model: qwen-toolcalling/qwen3.5:9b
       api_base: os.environ/OLLAMA_HOST
 
-  - model_name: anthropic.claude-4-5-haiku
+  - model_name: claude-haiku-4-5
     litellm_params:
-      model: openai/anthropic.claude-4-5-haiku
+      model: openai/claude-haiku-4-5
       api_base: os.environ/LLM_GATEWAY_BASE_URL
       api_key: os.environ/LLM_GATEWAY_API_KEY
 
-  - model_name: gemini-2.5-flash
+  - model_name: gemini-3.1-flash-lite
     litellm_params:
-      model: openai/gemini-2.5-flash
+      model: openai/gemini-3.1-flash-lite
       api_base: os.environ/LLM_GATEWAY_BASE_URL
       api_key: os.environ/LLM_GATEWAY_API_KEY
 
-  - model_name: gemini-3.1-pro
+  - model_name: gemini-2.5-pro
     litellm_params:
-      model: openai/gemini-3.1-pro
+      model: openai/gemini-2.5-pro
       api_base: os.environ/LLM_GATEWAY_BASE_URL
       api_key: os.environ/LLM_GATEWAY_API_KEY
 

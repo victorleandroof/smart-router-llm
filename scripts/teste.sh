@@ -36,13 +36,13 @@ curl  -X POST "${LLM_GATEWAY_BASE_URL}/chat/completions" \
 
 
 
-curl -v -X POST "${LLM_GATEWAY_BASE_URL}/chat/completions"  \
+curl -X POST "${LLM_GATEWAY_BASE_URL}/chat/completions"  \
   -H "Authorization: Bearer ${LLM_GATEWAY_TEST_TOKEN}" \
   -H "Content-Type: application/json" \
   -H "${TENANT_HEADER}: ${TENANT}" \
   -H "${AGENT_HEADER}: ${AGENT}" \
   -d '{
-    "model": "gemini-2.5-flash",
+    "model": "gemini-3.1-flash-lite",
     "messages": [
       {"role": "user", "content": "List files"},
       {"role": "assistant", "content": null, "tool_calls": [{"id": "AbCdEf123", "type": "function", "function": {"name": "shell", "arguments": "{\"command\":\"ls\"}"}}]},
