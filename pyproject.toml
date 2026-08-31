@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-vcs"]
 build-backend = "hatchling.build"
 
 [project]
-name = "smart-router-llm-gateway"
+name = "smart-router-llm"
 dynamic = ["version"]
 description = "Proxy inteligente entre APIs compatíveis com OpenAI e múltiplos provedores de LLM, com roteamento por complexidade e compressão de contexto."
 readme = "readme.md"

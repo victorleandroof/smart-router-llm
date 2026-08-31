@@ -121,7 +121,7 @@ Para reduzir custos e latência, o gateway aplica duas técnicas antes do roteam
 ### 6.0. Instalação via pip (alternativa ao Docker)
 
 ```bash
-pip install smart-router-llm-gateway
+pip install smart-router-llm
 ```
 
 Redis e Ollama continuam sendo responsabilidade sua instalar e rodar — o pacote só se conecta a eles, não os empacota nem gerencia.
